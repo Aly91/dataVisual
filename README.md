@@ -1,7 +1,4 @@
 # dataVisual
-<<<<<<< HEAD
-A data visualisation assignment made with the Processing framework for Object-Oriented Programming.
-=======
 A data visualsation assignment made with the Proccessing framework for Object-Oriented Programming
 >>>>>>> 82a2e352cd48c43df216d00b85195be590369988
 
@@ -12,5 +9,4 @@ I may add the option to click on the individual areas in the graph to jump into 
 <<<<<<< HEAD
 I intend to also allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file
 =======
-I intend to also allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file to store these values. When done the total and average weight will be calculated, it will be displayed on
->>>>>>> 82a2e352cd48c43df216d00b85195be590369988
+I intend to also allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file to store these values. When done the total and average weight will be calculated, it will be displayed on simple graph. There will drop menu or button to 
