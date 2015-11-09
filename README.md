@@ -7,4 +7,10 @@ I may add the option to click on the individual areas in the graph to jump into 
 
 I intend to also allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file.
 
-I intend to also allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file to store these values. When done the total and average weight will be calculated, it will be displayed on simple graph. There will be a  drop menu or button to choose which data (Weight loss
+Also,I want to allow the user to input values of the goal for that month and to input their the weight lost each week. These will be written to a file to store these values. When done the total and average weight will be calculated, it will be displayed on simple graph. There will be a drop down menu or button to choose which data (Weight loss by week/.etc) to be displayed. 
+
+Encapsulation and inheritence will be used, a separate class (Graph) will handle drawing the initial graph while the main class will handle reading in the initial set of values, the UI and the input from the user.
+
+
+
+
