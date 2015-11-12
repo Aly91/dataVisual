@@ -2,6 +2,7 @@ void setup()
 {
   size (500, 500); 
   background(0);
+  loadData();
 }
 
 void loadData()
@@ -15,6 +16,7 @@ void loadData()
     float f = Float.parseFloat(s);
     wData.add(f);
   }
+}
   
   
 void draw()
@@ -26,7 +28,3 @@ void draw()
 }
   
   
-}
-
-
-
