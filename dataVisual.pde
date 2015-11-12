@@ -15,8 +15,12 @@ void loadData()
     String[] parts = line.split(" , ");
     Weight weight = new Weight();
     weight.month = parts[0];
-    weight.weight = Float.parseFloat(parts[1]);
-    weight.totalLost = weight.weight;
+    weight.week1 = Float.parseFloat(parts[1]);
+    weight.week2 = Float.parseFloat(parts[2]);
+    weight.week3 = Float.parseFloat(parts[3]);
+    weight.week4 = Float.parseFloat(parts[4]);
+    float sum = week1 + week2 + week3+ week4;
+    weight.totalLost = sum;
   }
   
 
@@ -26,8 +30,7 @@ void loadData()
 void draw()
 {
   
- //drawGraph.update();
- //drawGraph.render(); 
+
   
 }
   
