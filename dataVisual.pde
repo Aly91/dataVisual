@@ -5,25 +5,29 @@ void setup()
   loadData();
 }
 
+ArrayList<Weight> wData = new ArrayList<Weight>();
+
 void loadData()
 {
-  
-  String[] lines = loadStrings("weight.csv");
-  ArrayList<Float> wData = new ArrayList<Float>();
-  
-  for(String s: lines)
+  String[] lines = loadStrings("weight.txt");
+  for(String line:lines)
   {
-    float f = Float.parseFloat(s);
-    wData.add(f);
+    String[] parts = line.split(" , ");
+    Weight weight = new Weight();
+    weight.month = parts[0];
+    weight.weight = Float.parseFloat(parts[1]);
+    weight.totalLost = weight.weight;
   }
+  
+
 }
   
   
 void draw()
 {
   
- drawGraph.update();
- drawGraph.render(); 
+ //drawGraph.update();
+ //drawGraph.render(); 
   
 }
   
