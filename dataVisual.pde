@@ -1,3 +1,4 @@
+ArrayList<Weight> wData = new ArrayList<Weight>();
 void setup()
 {
   size (500, 500); 
@@ -5,27 +6,28 @@ void setup()
   loadData();
 }
 
-ArrayList<Weight> wData = new ArrayList<Weight>();
+float x1,x2,y1,y2;
+
+
 
 void loadData()
 {
-  String[] lines = loadStrings("weight.txt");
-  for(String line:lines)
+  String[] lines = loadStrings("weight.csv");
+  for(int i = 0; i < lines.length; i++)
   {
-    String[] parts = line.split(" , ");
-    Weight weight = new Weight();
-    weight.month = parts[0];
-    weight.week1 = Float.parseFloat(parts[1]);
-    weight.week2 = Float.parseFloat(parts[2]);
-    weight.week3 = Float.parseFloat(parts[3]);
-    weight.week4 = Float.parseFloat(parts[4]);
-    float sum = week1 + week2 + week3+ week4;
-    weight.totalLost = sum;
+    Weight weight = new Weight(lines[i]);
+    wData.add(weight);
   }
+}
+void drawGraph (ArrayList<Weight> wData, float x1, float x2, float y1, float y2)
+{
+  float xInc = width/wData.size();
   
-
 }
   
+
+
+
   
 void draw()
 {
