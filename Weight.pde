@@ -5,13 +5,20 @@
   float weight;
   float totalLost;
   
-public Weight(String line) 
+  
+ Weight(String month, String weeks, float weight, float totalLost)
  {
-   String[] elements = line.split(",");
-   month = elements[0];
-   weeks = elements[1];
-   weight = Float.parseFloat(elements[2]);
-   totalLost = Float.parseFloat(elements[3]);
-
+   this.month = month;
+   this.weeks = weeks;
+   this.weight = weight;
+   this.totalLost = totalLost;
+   
+ }
+ public Weight() 
+ {
+   month = "";
+   weeks = "";
+   weight = 0.0f;
+   totalLost = 0.0f;
  }
 }
