@@ -45,8 +45,8 @@ void drawGraph (ArrayList<Weight> wData, float x1, float x2, float y1, float y2)
 {
       background(0);
       float border = width *0.1f;
-      float windowRange = (width - (border * 2.0f));
-      float dataRange =40;      
+      float windowRange = (width - (border * 1.0f));
+      float dataRange =600;      
       float lineWidth =  windowRange / (float) (wData.size() - 1) ; 
       float scale = windowRange / dataRange;
       for (int i = 1 ; i < wData.size() ; i ++)
@@ -54,11 +54,29 @@ void drawGraph (ArrayList<Weight> wData, float x1, float x2, float y1, float y2)
         x1 = border + ((i - 1) * lineWidth);
         x2 = border + (i * lineWidth);
         y1 = (height - border) - (wData.get(i-1).weight)*scale;
-        y2 = (height - border) - (wData.get(i).weight)*scale;
+        y2 = (height - border) - (wData.get(i).weeks)*scale;
+        
         stroke(0,255,255);
         line(x1, y1, x2, y2);
-      }
-     
+      }   
+}
+
+void drawAxis(ArrayList<Weight> wData, int hIntervals, int vIntervals, float vDataRange, float border)
+{
+  stroke(255,255,255);
+  fill(200,200,200);
+  
+  line(border, height - border, width - border, height - border);
+  float windowRange = (width - (border * 2.0f));
+  float guideLines = border *0.1f;
+  
+  for(int i = 0; i <= hIntervals; i++)
+  {
+    float xRange = map(i, 0, hIntervals, border, border + windowRange);
+    line(xRange, height - (border - guideLines), xRange, (height - border));
+  }
+  
+  
 }
 
 void draw()
